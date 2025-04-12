@@ -1,0 +1,8 @@
+# Kill 3000
+kill -9 $(lsof -t -i :3000)
+
+
+#
+nvm install --lts
+nvm use --lts
+npm run dev-server
