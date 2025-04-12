@@ -4,6 +4,7 @@
  */
 
 /* global document, Office, PDFLib, jspdf */
+import { Email } from "../models/email.js";
 
 Office.onReady((info) => {
   if (info.host === Office.HostType.Outlook) {
@@ -18,6 +19,8 @@ function initializeApp() {
 }
 
 async function downloadEmailAsPDF() {
+  debugger;
+  const email = new Email(Office.context.mailbox.item);
   const item = Office.context.mailbox.item;
   if (!item || !item.body) {
     return console.error("Email item is not available.");
