@@ -4,7 +4,6 @@
  */
 
 /* global document, Office, PDFLib, jspdf */
-
 Office.onReady((info) => {
   if (info.host === Office.HostType.Outlook) {
     initializeApp();
